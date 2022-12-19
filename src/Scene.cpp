@@ -76,7 +76,7 @@ Vector3 Scene::tracePath(const Ray &ray, uint32_t depth, uint32_t maxDepth)
         switch (sphere.m_Material)
         {
         case MaterialType::DIFFUSE:
-            newRay.m_Direction = Vector3::random_hemi(intersection.normal);
+            newRay.m_Direction = Vector3::random_hemi(intersection.normal).normalized();
             cosPhi = newRay.m_Direction.dot(intersection.normal);
             //                    L_i                          Lambertian BRDF         cosPhi
             return tracePath(newRay, depth + 1, maxDepth) * (sphere.m_Color / M_PI) * (cosPhi) * 2 * M_PI;
