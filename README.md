@@ -13,7 +13,7 @@ Todo:
 * Refactor
 * Support for textures
 * Support for more material types
-* Support for triangulated meshes (requires an accelaration structure like BVH)
+* Support for triangulated meshes (requires an acceleration structure)
 
 Building instructions:
 ```
